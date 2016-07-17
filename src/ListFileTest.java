@@ -41,6 +41,8 @@ public class ListFileTest {
 		
 		lf.close();
 		ListFile.delete(listFileName);
+		assertFalse(new File(listFileName).exists());
+		
 		
 	}
 

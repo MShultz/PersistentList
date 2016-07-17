@@ -5,27 +5,29 @@ public class Entry {
      private long link;
 
      public Entry(String string, long value, long link){
-    	 
+    	 this.string = string;
+    	 this.value = value;
+    	 this.link = link;
      }
 
      public String getString(){
-    	 return "Invalid String";
+    	 return string;
      }
 
      public long getValue(){
-    	 return -1;
+    	 return value;
      }
 
      public void setValue(long value){
-    	 
+    	 this.value = value;
      }
 
      public long getLink(){
-    	 return -1;
+    	 return link;
      }
 
      public void setLink(long link){
-    	 
+    	 this.link = link;
      }
 
 	@Override
