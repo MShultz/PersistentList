@@ -9,6 +9,7 @@ public class ListFileTest {
 	@Test
 	public void test() {
 		String listFileName = "listTest.bin";
+		assertFalse(new File(listFileName).exists());
 		ListFile.initialize(listFileName);
 		assertTrue(new File(listFileName).exists());
 		
@@ -40,6 +41,12 @@ public class ListFileTest {
 		assertEquals(42, eTest3.getValue());
 		
 		lf.close();
+		 ListFile lf2 = new ListFile("listTest.bin");
+		 Entry CloseTest = new Entry("Testforclose" ,600, -1);
+		long closeNum =  lf2.newEntry(CloseTest);
+		assertFalse(closeNum == 0);
+		lf2.close();
+		
 		ListFile.delete(listFileName);
 		assertFalse(new File(listFileName).exists());
 		

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 public class ListFile {
-	private final long LONG_SIZE = 8;
-	private final long INT_SIZE = 4;
 	RandomAccessFile raFile;
 	long currentOffset;
 
